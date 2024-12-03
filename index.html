@@ -3,83 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Literasi Digital Indonesia</title>
+    <title>Pendidikan Media Sosial Indonesia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
+        .batik-bg {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f3f4f6"/><path d="M0 0h100v100H0z" fill="%23ef4444" fill-opacity="0.1"/><circle cx="50" cy="50" r="30" stroke="%23ef4444" stroke-width="2" fill="none"/><circle cx="50" cy="50" r="15" stroke="%23ef4444" stroke-width="2" fill="none"/></svg>');
         }
     </style>
 </head>
-<body class="bg-red-50 text-gray-800">
-    <header class="bg-red-600 text-white p-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Literasi Digital Indonesia</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#beranda" class="hover:underline">Beranda</a></li>
-                    <li><a href="#praktik-terbaik" class="hover:underline">Praktik Terbaik</a></li>
-                    <li><a href="#etika-privasi" class="hover:underline">Etika Privasi</a></li>
-                    <li><a href="#literasi-digital" class="hover:underline">Literasi Digital</a></li>
-                </ul>
-            </nav>
-        </div>
+<body class="font-sans bg-gray-100 text-gray-900">
+    <header class="bg-red-600 text-white shadow-lg">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Media Sosial Cerdas</a>
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="#praktik-terbaik" class="hover:text-yellow-300">Praktik Terbaik</a></li>
+                <li><a href="#etika-privasi" class="hover:text-yellow-300">Etika Privasi</a></li>
+                <li><a href="#literasi-digital" class="hover:text-yellow-300">Literasi Digital</a></li>
+            </ul>
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
     </header>
 
-    <main class="container mx-auto mt-8 p-4">
-        <section id="beranda" class="mb-12">
-            <h2 class="text-3xl font-bold mb-4 text-red-800">Selamat Datang di Literasi Digital Indonesia</h2>
-            <p class="text-lg">Mari bersama-sama belajar tentang penggunaan media sosial yang bijak, etika privasi online, dan meningkatkan literasi digital kita.</p>
+    <main>
+        <section class="batik-bg py-20 text-center">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Selamat Datang di Media Sosial Cerdas</h1>
+                <p class="text-xl mb-8">Pelajari cara menggunakan media sosial dengan aman, etis, dan efektif</p>
+                <a href="#praktik-terbaik" class="bg-yellow-500 text-gray-900 px-6 py-3 rounded-full text-lg font-semibold hover:bg-yellow-400 transition duration-300">Mulai Belajar</a>
+            </div>
         </section>
 
-        <section id="praktik-terbaik" class="mb-12">
-            <h2 class="text-2xl font-bold mb-4 text-red-800">Praktik Terbaik Media Sosial</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Pilih Kata dengan Bijak</h3>
-                    <p>Selalu pikirkan dampak dari postingan Anda. Gunakan bahasa yang sopan dan positif untuk menciptakan lingkungan online yang ramah.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Verifikasi Sebelum Membagikan</h3>
-                    <p>Pastikan informasi yang Anda bagikan akurat dan berasal dari sumber terpercaya untuk menghindari penyebaran berita palsu.</p>
+        <section id="praktik-terbaik" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center">Praktik Terbaik Media Sosial</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">1. Jaga Privasi Anda</h3>
+                        <p>Selalu periksa pengaturan privasi akun Anda dan batasi informasi yang Anda bagikan secara publik. Ingat, sekali sesuatu diunggah ke internet, sulit untuk menghapusnya sepenuhnya.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">2. Berpikir Sebelum Memposting</h3>
+                        <p>Pertimbangkan dampak jangka panjang dari konten yang Anda posting. Apakah itu dapat mempengaruhi reputasi atau peluang Anda di masa depan? Jika ragu, lebih baik tidak memposting.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="etika-privasi" class="mb-12">
-            <h2 class="text-2xl font-bold mb-4 text-red-800">Etika Privasi Media Sosial</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Hormati Privasi Orang Lain</h3>
-                <p>Jangan membagikan informasi pribadi atau foto orang lain tanpa izin mereka. Ini termasuk menandai orang dalam postingan atau foto tanpa persetujuan mereka.</p>
-                <h3 class="text-xl font-semibold mt-4 mb-2">Kelola Pengaturan Privasi Anda</h3>
-                <p>Periksa dan sesuaikan pengaturan privasi akun media sosial Anda secara berkala. Pastikan Anda tahu siapa yang dapat melihat postingan dan informasi Anda.</p>
+        <section id="etika-privasi" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center">Etika Privasi di Media Sosial</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Menghormati Privasi Orang Lain</h3>
+                    <p class="mb-4">Sama seperti Anda ingin privasi Anda dihormati, penting untuk menghormati privasi orang lain di media sosial. Berikut beberapa panduan etis:</p>
+                    <ul class="list-disc pl-6 mb-4">
+                        <li>Jangan membagikan informasi pribadi atau foto orang lain tanpa izin mereka.</li>
+                        <li>Hormati batas-batas yang ditetapkan oleh teman dan koneksi Anda di media sosial.</li>
+                        <li>Jangan menggunakan informasi pribadi orang lain untuk keuntungan pribadi atau untuk merugikan mereka.</li>
+                    </ul>
+                    <p>Ingat, etika privasi bukan hanya tentang aturan, tetapi juga tentang membangun kepercayaan dan rasa hormat dalam komunitas online.</p>
+                </div>
             </div>
         </section>
 
-        <section id="literasi-digital" class="mb-12">
-            <h2 class="text-2xl font-bold mb-4 text-red-800">Meningkatkan Literasi Digital</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Berpikir Kritis</h3>
-                    <p>Kembangkan kemampuan untuk mengevaluasi informasi online secara kritis. Tanyakan sumber, motif, dan kredibilitas konten yang Anda temui.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Pahami Teknologi</h3>
-                    <p>Pelajari dasar-dasar cara kerja internet, media sosial, dan teknologi digital. Pemahaman ini akan membantu Anda menggunakan alat digital dengan lebih efektif dan aman.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Terus Belajar</h3>
-                    <p>Dunia digital terus berkembang. Jadilah pembelajar seumur hidup dan selalu perbarui pengetahuan Anda tentang tren dan praktik terbaik terbaru.</p>
+        <section id="literasi-digital" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center">Literasi Digital</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Mengenali Informasi Palsu</h3>
+                        <p>Belajar cara mengidentifikasi dan memverifikasi sumber informasi. Jangan mudah percaya atau membagikan berita tanpa memeriksa kebenarannya terlebih dahulu.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Keamanan Online</h3>
+                        <p>Pahami pentingnya kata sandi yang kuat, autentikasi dua faktor, dan cara melindungi diri dari penipuan online dan serangan phishing.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Manajemen Jejak Digital</h3>
+                        <p>Ketahui bagaimana aktivitas online Anda membentuk jejak digital dan cara mengelolanya secara efektif untuk melindungi reputasi online Anda.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-red-800 text-white p-4 mt-8">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Literasi Digital Indonesia. Semua hak dilindungi.</p>
+    <footer class="bg-red-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Media Sosial Cerdas. Semua hak dilindungi.</p>
+            <p class="mt-2">Dibuat dengan ❤️ untuk Indonesia</p>
         </div>
     </footer>
+
+    <script>
+        // Simple toggle for mobile menu
+        const menuButton = document.querySelector('button');
+        const navItems = document.querySelector('nav ul');
+        
+        menuButton.addEventListener('click', () => {
+            navItems.classList.toggle('hidden');
+            navItems.classList.toggle('flex');
+            navItems.classList.toggle('flex-col');
+            navItems.classList.toggle('absolute');
+            navItems.classList.toggle('top-16');
+            navItems.classList.toggle('right-0');
+            navItems.classList.toggle('bg-red-600');
+            navItems.classList.toggle('w-full');
+            navItems.classList.toggle('text-center');
+        });
+    </script>
 </body>
 </html>
