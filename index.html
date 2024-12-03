@@ -4,123 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Literasi Digital Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #cc0000; /* Red color from Indonesian flag */
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-bottom: 2rem;
-        }
-        nav {
-            background-color: #ffffff; /* White color from Indonesian flag */
-            padding: 1rem;
-            margin-bottom: 2rem;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-        nav ul li a {
-            color: #cc0000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        article {
-            margin-bottom: 2rem;
-        }
-        h1, h2 {
-            color: #cc0000;
-        }
-        footer {
-            text-align: center;
-            margin-top: 2rem;
-            padding: 1rem;
-            background-color: #cc0000;
-            color: white;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul li {
-                margin-bottom: 10px;
-            }
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Literasi Digital Indonesia</h1>
+<body class="bg-red-50 text-gray-800">
+    <header class="bg-red-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Literasi Digital Indonesia</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#beranda" class="hover:underline">Beranda</a></li>
+                    <li><a href="#praktik-terbaik" class="hover:underline">Praktik Terbaik</a></li>
+                    <li><a href="#etika-privasi" class="hover:underline">Etika Privasi</a></li>
+                    <li><a href="#literasi-digital" class="hover:underline">Literasi Digital</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#praktik-terbaik">Praktik Terbaik Media Sosial</a></li>
-            <li><a href="#etika-privasi">Etika Privasi Media Sosial</a></li>
-            <li><a href="#literasi-digital">Literasi Digital</a></li>
-        </ul>
-    </nav>
+    <main class="container mx-auto mt-8 p-4">
+        <section id="beranda" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-red-800">Selamat Datang di Literasi Digital Indonesia</h2>
+            <p class="text-lg">Mari bersama-sama belajar tentang penggunaan media sosial yang bijak, etika privasi online, dan meningkatkan literasi digital kita.</p>
+        </section>
 
-    <main>
-        <article id="praktik-terbaik">
-            <h2>Praktik Terbaik Media Sosial</h2>
-            <p>Media sosial telah menjadi bagian integral dari kehidupan kita sehari-hari. Berikut adalah beberapa praktik terbaik untuk penggunaan media sosial yang aman dan bertanggung jawab:</p>
-            <ul>
-                <li>Pikirkan sebelum memposting: Pastikan konten yang Anda bagikan tidak merugikan diri sendiri atau orang lain.</li>
-                <li>Jaga privasi Anda: Batasi informasi pribadi yang Anda bagikan secara publik.</li>
-                <li>Hormati orang lain: Jangan membagikan informasi atau foto orang lain tanpa izin mereka.</li>
-                <li>Verifikasi informasi: Pastikan kebenaran informasi sebelum membagikannya untuk menghindari penyebaran berita palsu.</li>
-                <li>Gunakan pengaturan privasi: Manfaatkan fitur pengaturan privasi yang disediakan oleh platform media sosial.</li>
-            </ul>
-        </article>
+        <section id="praktik-terbaik" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-red-800">Praktik Terbaik Media Sosial</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Pilih Kata dengan Bijak</h3>
+                    <p>Selalu pikirkan dampak dari postingan Anda. Gunakan bahasa yang sopan dan positif untuk menciptakan lingkungan online yang ramah.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Verifikasi Sebelum Membagikan</h3>
+                    <p>Pastikan informasi yang Anda bagikan akurat dan berasal dari sumber terpercaya untuk menghindari penyebaran berita palsu.</p>
+                </div>
+            </div>
+        </section>
 
-        <article id="etika-privasi">
-            <h2>Etika Privasi Media Sosial</h2>
-            <p>Privasi di media sosial adalah hal yang sangat penting. Berikut beberapa prinsip etika privasi yang perlu diperhatikan:</p>
-            <ul>
-                <li>Hormati batas-batas: Jangan memaksa orang lain untuk membagikan informasi yang mereka tidak ingin bagikan.</li>
-                <li>Izin sebelum menandai: Minta izin sebelum menandai seseorang dalam postingan atau foto.</li>
-                <li>Jaga kerahasiaan: Jangan membagikan pesan pribadi atau informasi rahasia tanpa izin.</li>
-                <li>Berhati-hati dengan data: Pahami bagaimana data Anda digunakan oleh platform media sosial.</li>
-                <li>Laporkan pelanggaran: Jika Anda melihat pelanggaran privasi, laporkan ke platform terkait.</li>
-            </ul>
-        </article>
+        <section id="etika-privasi" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-red-800">Etika Privasi Media Sosial</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Hormati Privasi Orang Lain</h3>
+                <p>Jangan membagikan informasi pribadi atau foto orang lain tanpa izin mereka. Ini termasuk menandai orang dalam postingan atau foto tanpa persetujuan mereka.</p>
+                <h3 class="text-xl font-semibold mt-4 mb-2">Kelola Pengaturan Privasi Anda</h3>
+                <p>Periksa dan sesuaikan pengaturan privasi akun media sosial Anda secara berkala. Pastikan Anda tahu siapa yang dapat melihat postingan dan informasi Anda.</p>
+            </div>
+        </section>
 
-        <article id="literasi-digital">
-            <h2>Literasi Digital</h2>
-            <p>Literasi digital adalah kemampuan untuk menggunakan teknologi informasi dan komunikasi secara efektif dan bertanggung jawab. Beberapa aspek penting dari literasi digital meliputi:</p>
-            <ul>
-                <li>Pemahaman teknologi: Mengerti cara kerja dasar perangkat dan aplikasi digital.</li>
-                <li>Evaluasi informasi: Mampu menilai kredibilitas dan relevansi informasi online.</li>
-                <li>Keamanan online: Memahami risiko keamanan online dan cara melindungi diri.</li>
-                <li>Kreasi konten digital: Mampu membuat dan mengelola konten digital secara bertanggung jawab.</li>
-                <li>Kolaborasi digital: Dapat berpartisipasi dan berkolaborasi dalam komunitas online secara etis.</li>
-            </ul>
-        </article>
+        <section id="literasi-digital" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-red-800">Meningkatkan Literasi Digital</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Berpikir Kritis</h3>
+                    <p>Kembangkan kemampuan untuk mengevaluasi informasi online secara kritis. Tanyakan sumber, motif, dan kredibilitas konten yang Anda temui.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Pahami Teknologi</h3>
+                    <p>Pelajari dasar-dasar cara kerja internet, media sosial, dan teknologi digital. Pemahaman ini akan membantu Anda menggunakan alat digital dengan lebih efektif dan aman.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Terus Belajar</h3>
+                    <p>Dunia digital terus berkembang. Jadilah pembelajar seumur hidup dan selalu perbarui pengetahuan Anda tentang tren dan praktik terbaik terbaru.</p>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Literasi Digital Indonesia. Semua hak dilindungi undang-undang.</p>
+
+    <footer class="bg-red-800 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Literasi Digital Indonesia. Semua hak dilindungi.</p>
+        </div>
     </footer>
 </body>
 </html>
-
-
