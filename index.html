@@ -7,9 +7,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .batik-bg {
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f3f4f6"/><path d="M0 0h100v100H0z" fill="%23ef4444" fill-opacity="0.1"/><circle cx="50" cy="50" r="30" stroke="%23ef4444" stroke-width="2" fill="none"/><circle cx="50" cy="50" r="15" stroke="%23ef4444" stroke-width="2" fill="none"/></svg>');
-        }
         .cyber-bg {
             background-color: #000;
             background-image: 
@@ -20,6 +17,10 @@
             background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
             background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
         }
+        .cyber-crimes-bg { background-color: #ff4757; }
+        .digital-literacy-bg { background-color: #2ed573; }
+        .privacy-ethics-bg { background-color: #5352ed; }
+        .best-practices-bg { background-color: #ffa502; }
     </style>
 </head>
 <body class="font-sans bg-gray-100 text-gray-900">
@@ -31,20 +32,20 @@
                     Literasi Digital
                 </a>
                 <ul class="hidden md:flex space-x-4">
-                    <li><a href="#cyber-crimes" class="hover:text-blue-400 transition duration-300"><i class="fas fa-exclamation-triangle mr-1 text-red-500"></i>Cyber Crimes</a></li>
-                    <li><a href="#literasi-digital" class="hover:text-blue-400 transition duration-300"><i class="fas fa-book-reader mr-1 text-green-500"></i>Literasi Digital</a></li>
-                    <li><a href="#etika-privasi" class="hover:text-blue-400 transition duration-300"><i class="fas fa-user-secret mr-1 text-purple-500"></i>Etika Privasi</a></li>
-                    <li><a href="#praktik-terbaik" class="hover:text-blue-400 transition duration-300"><i class="fas fa-check-circle mr-1 text-yellow-500"></i>Praktik Terbaik</a></li>
+                    <li><a href="#cyber-crimes" class="hover:text-red-400 transition duration-300"><i class="fas fa-exclamation-triangle mr-1 text-red-400"></i>Cyber Crimes</a></li>
+                    <li><a href="#literasi-digital" class="hover:text-green-400 transition duration-300"><i class="fas fa-book-reader mr-1 text-green-400"></i>Literasi Digital</a></li>
+                    <li><a href="#etika-privasi" class="hover:text-blue-400 transition duration-300"><i class="fas fa-user-secret mr-1 text-blue-400"></i>Etika Privasi</a></li>
+                    <li><a href="#praktik-terbaik" class="hover:text-yellow-400 transition duration-300"><i class="fas fa-check-circle mr-1 text-yellow-400"></i>Praktik Terbaik</a></li>
                 </ul>
                 <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
             <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-                <li><a href="#cyber-crimes" class="block py-2 hover:bg-gray-800"><i class="fas fa-exclamation-triangle mr-1 text-red-500"></i>Cyber Crimes</a></li>
-                <li><a href="#literasi-digital" class="block py-2 hover:bg-gray-800"><i class="fas fa-book-reader mr-1 text-green-500"></i>Literasi Digital</a></li>
-                <li><a href="#etika-privasi" class="block py-2 hover:bg-gray-800"><i class="fas fa-user-secret mr-1 text-purple-500"></i>Etika Privasi</a></li>
-                <li><a href="#praktik-terbaik" class="block py-2 hover:bg-gray-800"><i class="fas fa-check-circle mr-1 text-yellow-500"></i>Praktik Terbaik</a></li>
+                <li><a href="#cyber-crimes" class="block py-2 hover:bg-gray-800"><i class="fas fa-exclamation-triangle mr-1 text-red-400"></i>Cyber Crimes</a></li>
+                <li><a href="#literasi-digital" class="block py-2 hover:bg-gray-800"><i class="fas fa-book-reader mr-1 text-green-400"></i>Literasi Digital</a></li>
+                <li><a href="#etika-privasi" class="block py-2 hover:bg-gray-800"><i class="fas fa-user-secret mr-1 text-blue-400"></i>Etika Privasi</a></li>
+                <li><a href="#praktik-terbaik" class="block py-2 hover:bg-gray-800"><i class="fas fa-check-circle mr-1 text-yellow-400"></i>Praktik Terbaik</a></li>
             </ul>
         </nav>
     </header>
@@ -60,10 +61,10 @@
             </div>
         </section>
 
-        <section id="cyber-crimes" class="py-16 bg-gray-100">
+        <section id="cyber-crimes" class="py-16 cyber-crimes-bg text-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-center">Cyber Crimes di Dunia Cyberspace</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold mb-8 text-center"><i class="fas fa-bug mr-2"></i>Cyber Crimes di Dunia Cyberspace</h2>
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-md">
                     <p class="mb-4">Kejahatan siber (cyber crimes) adalah tindakan kriminal yang dilakukan menggunakan teknologi komputer dan jaringan internet. Beberapa jenis cyber crimes yang umum terjadi meliputi:</p>
                     <ul class="list-disc pl-6 mb-4">
                         <li><i class="fas fa-fish text-red-500 mr-2"></i>Phishing: Upaya untuk mendapatkan informasi sensitif seperti kata sandi dan detail kartu kredit dengan berpura-pura sebagai entitas terpercaya.</li>
@@ -77,11 +78,11 @@
             </div>
         </section>
 
-        <section id="literasi-digital" class="py-16 bg-white">
+        <section id="literasi-digital" class="py-16 digital-literacy-bg text-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-8 text-center">4 Pilar Literasi Digital: Fondasi dalam Era Digital</h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="bg-white text-gray-900 p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-semibold mb-4"><i class="fas fa-laptop-code mr-2 text-blue-500"></i>1. Kecakapan Digital (Digital Skills)</h3>
                         <p>Kecakapan digital adalah kemampuan menggunakan teknologi dan perangkat digital dengan efisien. Pilar ini mencakup:</p>
                         <ul class="list-disc pl-6 mt-2">
@@ -90,7 +91,7 @@
                             <li>Kemampuan untuk memecahkan masalah teknis dasar yang mungkin muncul saat menggunakan teknologi.</li>
                         </ul>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="bg-white text-gray-900 p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-semibold mb-4"><i class="fas fa-balance-scale mr-2 text-green-500"></i>2. Etika Digital (Digital Ethics)</h3>
                         <p>Etika digital adalah pedoman moral yang mengatur perilaku individu di dunia maya. Pilar ini melibatkan:</p>
                         <ul class="list-disc pl-6 mt-2">
@@ -99,7 +100,7 @@
                             <li>Menggunakan teknologi secara bertanggung jawab, seperti menghormati hak cipta dan hak kekayaan intelektual.</li>
                         </ul>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="bg-white text-gray-900 p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-semibold mb-4"><i class="fas fa-shield-alt mr-2 text-red-500"></i>3. Keamanan Digital (Digital Safety)</h3>
                         <p>Keamanan digital berfokus pada perlindungan data pribadi dan informasi penting dari ancaman di dunia maya. Hal ini mencakup:</p>
                         <ul class="list-disc pl-6 mt-2">
@@ -108,7 +109,7 @@
                             <li>Mengelola data pribadi dengan bijak, seperti tidak membagikan informasi sensitif di media sosial.</li>
                         </ul>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="bg-white text-gray-900 p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-semibold mb-4"><i class="fas fa-users mr-2 text-purple-500"></i>4. Budaya Digital (Digital Culture)</h3>
                         <p>Budaya digital adalah pemahaman tentang bagaimana teknologi memengaruhi komunikasi, kolaborasi, dan perilaku sosial. Pilar ini mencakup:</p>
                         <ul class="list-disc pl-6 mt-2">
@@ -121,10 +122,10 @@
             </div>
         </section>
 
-        <section id="etika-privasi" class="py-16 bg-gray-100">
+        <section id="etika-privasi" class="py-16 privacy-ethics-bg text-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-8 text-center">Etika Privasi di Media Sosial</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold mb-4"><i class="fas fa-user-shield mr-2 text-blue-500"></i>Menghormati Privasi Orang Lain</h3>
                     <p class="mb-4">Sama seperti Anda ingin privasi Anda dihormati, penting untuk menghormati privasi orang lain di media sosial. Berikut beberapa panduan etis:</p>
                     <ul class="list-disc pl-6 mb-4">
@@ -132,31 +133,31 @@
                         <li><i class="fas fa-border-all text-green-500 mr-2"></i>Hormati batas-batas yang ditetapkan oleh teman dan koneksi Anda di media sosial.</li>
                         <li><i class="fas fa-hand-paper text-yellow-500 mr-2"></i>Jangan menggunakan informasi pribadi orang lain untuk keuntungan pribadi atau untuk merugikan mereka.</li>
                         <li><i class="fas fa-map-marker-alt text-purple-500 mr-2"></i>Berhati-hati saat memposting lokasi atau check-in yang dapat membahayakan privasi orang lain.</li>
-                        <li><i class="fas fa-comment-dots text-blue-500 mr-2"></i>Hindari membagikan screenshot percakapan pribadi tanpa persetujuan semua pihak yang terlibat.</li>
+                        <li><i class="fas fa-comment-slash text-blue-500 mr-2"></i>Hindari membagikan screenshot percakapan pribadi tanpa persetujuan semua pihak yang terlibat.</li>
                     </ul>
                     <p>Ingat, etika privasi bukan hanya tentang aturan, tetapi juga tentang membangun kepercayaan dan rasa hormat dalam komunitas online.</p>
                 </div>
             </div>
         </section>
 
-        <section id="praktik-terbaik" class="py-16 bg-white">
+        <section id="praktik-terbaik" class="py-16 best-practices-bg text-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-8 text-center">Praktik Terbaik Media Sosial</h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="bg-white text-gray-900 p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-semibold mb-4"><i class="fas fa-user-lock mr-2 text-blue-500"></i>1. Jaga Privasi Anda</h3>
                         <p>Selalu periksa pengaturan privasi akun Anda dan batasi informasi yang Anda bagikan secara publik. Ingat, sekali sesuatu diunggah ke internet, sulit untuk menghapusnya sepenuhnya.</p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="bg-white text-gray-900 p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-semibold mb-4"><i class="fas fa-brain mr-2 text-green-500"></i>2. Berpikir Sebelum Memposting</h3>
                         <p>Pertimbangkan dampak jangka panjang dari konten yang Anda posting. Apakah itu dapat mempengaruhi reputasi atau peluang Anda di masa depan? Jika ragu, lebih baik tidak memposting.</p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-check-double mr-2 text-yellow-500"></i>3. Verifikasi Informasi</h3>
+                    <div class="bg-white text-gray-900 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-check-double mr-2 text-red-500"></i>3. Verifikasi Informasi</h3>
                         <p>Sebelum membagikan berita atau informasi, pastikan untuk memeriksa kebenarannya dari sumber yang terpercaya. Jangan berkontribusi pada penyebaran berita palsu atau misinformasi.</p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-heart mr-2 text-red-500"></i>4. Bersikap Positif dan Konstruktif</h3>
+                    <div class="bg-white text-gray-900 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-heart mr-2 text-purple-500"></i>4. Bersikap Positif dan Konstruktif</h3>
                         <p>Gunakan media sosial untuk menyebarkan positifitas. Berikan komentar yang membangun, dukung orang lain, dan hindari konflik yang tidak perlu.</p>
                     </div>
                 </div>
@@ -170,7 +171,7 @@
                 <a href="https://www.facebook.com/agamriyandana.id" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-facebook text-blue-600"></i></a>
                 <a href="https://x.com/agam_riyandana1/" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-twitter text-blue-400"></i></a>
                 <a href="https://instagram.com/realagam1" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-instagram text-pink-600"></i></a>
-                <a href="#" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin text-blue-500"></i></a>
+                <a href="#" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin text-blue-700"></i></a>
             </div>
             <p class="mt-4">&copy; <span id="current-year"></span> Literasi Digital Dan Media Sosial Cerdas. All Rights Reserved. Dibuat dengan <i class="fas fa-heart text-red-500"></i> untuk Indonesia</p>
         </div>
