@@ -10,66 +10,112 @@
         .batik-bg {
             background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f3f4f6"/><path d="M0 0h100v100H0z" fill="%23ef4444" fill-opacity="0.1"/><circle cx="50" cy="50" r="30" stroke="%23ef4444" stroke-width="2" fill="none"/><circle cx="50" cy="50" r="15" stroke="%23ef4444" stroke-width="2" fill="none"/></svg>');
         }
-        .navbar-fixed {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-        }
-        .navbar-scrolled {
-            background-color: rgba(220, 38, 38, 0.9);
+        .cyber-bg {
+            background-color: #000;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+                radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+            background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+            background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
         }
     </style>
 </head>
 <body class="font-sans bg-gray-100 text-gray-900">
-    <header class="bg-red-600 text-white shadow-lg navbar-fixed">
-        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold flex items-center">
-                <i class="fas fa-book-reader mr-2"></i>
-                Literasi Digital
-            </a>
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="#praktik-terbaik" class="hover:text-yellow-300 transition duration-300 flex items-center"><i class="fas fa-check-circle mr-2"></i>Praktik Terbaik</a></li>
-                <li><a href="#etika-privasi" class="hover:text-yellow-300 transition duration-300 flex items-center"><i class="fas fa-user-shield mr-2"></i>Etika Privasi</a></li>
-                <li><a href="#literasi-digital" class="hover:text-yellow-300 transition duration-300 flex items-center"><i class="fas fa-laptop-code mr-2"></i>Literasi Digital</a></li>
+    <header class="bg-gray-900 text-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold flex items-center">
+                    <i class="fas fa-shield-alt mr-2"></i>
+                    Literasi Digital
+                </a>
+                <ul class="hidden md:flex space-x-4">
+                    <li><a href="#cyber-crimes" class="hover:text-blue-400 transition duration-300"><i class="fas fa-exclamation-triangle mr-1"></i>Cyber Crimes</a></li>
+                    <li><a href="#literasi-digital" class="hover:text-blue-400 transition duration-300"><i class="fas fa-book-reader mr-1"></i>Literasi Digital</a></li>
+                    <li><a href="#etika-privasi" class="hover:text-blue-400 transition duration-300"><i class="fas fa-user-secret mr-1"></i>Etika Privasi</a></li>
+                    <li><a href="#praktik-terbaik" class="hover:text-blue-400 transition duration-300"><i class="fas fa-check-circle mr-1"></i>Praktik Terbaik</a></li>
+                </ul>
+                <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <li><a href="#cyber-crimes" class="block py-2 hover:bg-gray-800"><i class="fas fa-exclamation-triangle mr-1"></i>Cyber Crimes</a></li>
+                <li><a href="#literasi-digital" class="block py-2 hover:bg-gray-800"><i class="fas fa-book-reader mr-1"></i>Literasi Digital</a></li>
+                <li><a href="#etika-privasi" class="block py-2 hover:bg-gray-800"><i class="fas fa-user-secret mr-1"></i>Etika Privasi</a></li>
+                <li><a href="#praktik-terbaik" class="block py-2 hover:bg-gray-800"><i class="fas fa-check-circle mr-1"></i>Praktik Terbaik</a></li>
             </ul>
-            <button class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
         </nav>
     </header>
 
-    <main class="pt-16">
-        <section class="batik-bg py-20 text-center">
+    <main>
+        <section class="cyber-bg py-20 text-center text-white">
             <div class="container mx-auto px-4">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4">Selamat Datang di Media Sosial Cerdas</h1>
                 <p class="text-xl mb-8">Pelajari cara menggunakan media sosial dengan aman, etis, dan efektif</p>
-                <a href="#praktik-terbaik" class="bg-yellow-500 text-gray-900 px-6 py-3 rounded-full text-lg font-semibold hover:bg-yellow-400 transition duration-300 inline-flex items-center">
-                    <i class="fas fa-graduation-cap mr-2"></i>
-                    Mulai Belajar
+                <a href="#praktik-terbaik" class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition duration-300">
+                    <i class="fas fa-rocket mr-2"></i>Mulai Belajar
                 </a>
             </div>
         </section>
 
-        <section id="praktik-terbaik" class="py-16 bg-white">
+        <section id="cyber-crimes" class="py-16 bg-gray-100">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-center">Praktik Terbaik Media Sosial</h2>
+                <h2 class="text-3xl font-bold mb-8 text-center">Cyber Crimes di Dunia Cyberspace</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="mb-4">Kejahatan siber (cyber crimes) adalah tindakan kriminal yang dilakukan menggunakan teknologi komputer dan jaringan internet. Beberapa jenis cyber crimes yang umum terjadi meliputi:</p>
+                    <ul class="list-disc pl-6 mb-4">
+                        <li>Phishing: Upaya untuk mendapatkan informasi sensitif seperti kata sandi dan detail kartu kredit dengan berpura-pura sebagai entitas terpercaya.</li>
+                        <li>Malware: Perangkat lunak berbahaya yang dirancang untuk merusak atau mengakses sistem komputer tanpa izin.</li>
+                        <li>Peretasan (Hacking): Akses tidak sah ke sistem komputer atau jaringan untuk mencuri data atau merusak sistem.</li>
+                        <li>Penipuan online: Berbagai bentuk penipuan yang dilakukan melalui internet, termasuk penipuan investasi dan romance scam.</li>
+                        <li>Cyberbullying: Pelecehan atau intimidasi yang dilakukan melalui media digital.</li>
+                    </ul>
+                    <p>Penting bagi pengguna internet untuk selalu waspada dan menerapkan praktik keamanan siber yang baik untuk melindungi diri dari ancaman cyber crimes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="literasi-digital" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center">4 Pilar Literasi Digital: Fondasi dalam Era Digital</h2>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4 flex items-center">
-                            <i class="fas fa-lock text-red-600 mr-2"></i>
-                            1. Jaga Privasi Anda
-                        </h3>
-                        <p>Selalu periksa pengaturan privasi akun Anda dan batasi informasi yang Anda bagikan secara publik. Ingat, sekali sesuatu diunggah ke internet, sulit untuk menghapusnya sepenuhnya.</p>
+                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-laptop-code mr-2"></i>1. Kecakapan Digital (Digital Skills)</h3>
+                        <p>Kecakapan digital adalah kemampuan menggunakan teknologi dan perangkat digital dengan efisien. Pilar ini mencakup:</p>
+                        <ul class="list-disc pl-6 mt-2">
+                            <li>Kemampuan mengoperasikan perangkat seperti komputer, smartphone, dan aplikasi.</li>
+                            <li>Pemahaman dasar tentang perangkat lunak (software) dan perangkat keras (hardware).</li>
+                            <li>Kemampuan untuk memecahkan masalah teknis dasar yang mungkin muncul saat menggunakan teknologi.</li>
+                        </ul>
                     </div>
                     <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4 flex items-center">
-                            <i class="fas fa-brain text-red-600 mr-2"></i>
-                            2. Berpikir Sebelum Memposting
-                        </h3>
-                        <p>Pertimbangkan dampak jangka panjang dari konten yang Anda posting. Apakah itu dapat mempengaruhi reputasi atau peluang Anda di masa depan? Jika ragu, lebih baik tidak memposting.</p>
+                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-balance-scale mr-2"></i>2. Etika Digital (Digital Ethics)</h3>
+                        <p>Etika digital adalah pedoman moral yang mengatur perilaku individu di dunia maya. Pilar ini melibatkan:</p>
+                        <ul class="list-disc pl-6 mt-2">
+                            <li>Kesadaran akan hak dan privasi orang lain di internet.</li>
+                            <li>Menghindari perilaku seperti cyberbullying, penyebaran hoaks, dan plagiarisme.</li>
+                            <li>Menggunakan teknologi secara bertanggung jawab, seperti menghormati hak cipta dan hak kekayaan intelektual.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-shield-alt mr-2"></i>3. Keamanan Digital (Digital Safety)</h3>
+                        <p>Keamanan digital berfokus pada perlindungan data pribadi dan informasi penting dari ancaman di dunia maya. Hal ini mencakup:</p>
+                        <ul class="list-disc pl-6 mt-2">
+                            <li>Menggunakan kata sandi yang kuat dan berbeda untuk setiap akun.</li>
+                            <li>Mengenali ancaman seperti phishing, malware, dan penipuan daring.</li>
+                            <li>Mengelola data pribadi dengan bijak, seperti tidak membagikan informasi sensitif di media sosial.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-users mr-2"></i>4. Budaya Digital (Digital Culture)</h3>
+                        <p>Budaya digital adalah pemahaman tentang bagaimana teknologi memengaruhi komunikasi, kolaborasi, dan perilaku sosial. Pilar ini mencakup:</p>
+                        <ul class="list-disc pl-6 mt-2">
+                            <li>Menggunakan teknologi untuk kolaborasi yang positif, seperti berbagi informasi bermanfaat dan membangun komunitas daring.</li>
+                            <li>Mengembangkan sikap kritis terhadap informasi yang ditemukan di internet.</li>
+                            <li>Menghargai keragaman budaya dalam interaksi digital.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -79,164 +125,69 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-8 text-center">Etika Privasi di Media Sosial</h2>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4 flex items-center">
-                        <i class="fas fa-user-shield text-red-600 mr-2"></i>
-                        Menghormati Privasi Orang Lain
-                    </h3>
+                    <h3 class="text-xl font-semibold mb-4"><i class="fas fa-user-shield mr-2"></i>Menghormati Privasi Orang Lain</h3>
                     <p class="mb-4">Sama seperti Anda ingin privasi Anda dihormati, penting untuk menghormati privasi orang lain di media sosial. Berikut beberapa panduan etis:</p>
-                    <ul class="list-none pl-6 mb-4">
-                        <li class="mb-2 flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
-                            Jangan membagikan informasi pribadi atau foto orang lain tanpa izin mereka.
-                        </li>
-                        <li class="mb-2 flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
-                            Hormati batas-batas yang ditetapkan oleh teman dan koneksi Anda di media sosial.
-                        </li>
-                        <li class="mb-2 flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
-                            Jangan menggunakan informasi pribadi orang lain untuk keuntungan pribadi atau untuk merugikan mereka.
-                        </li>
+                    <ul class="list-disc pl-6 mb-4">
+                        <li>Jangan membagikan informasi pribadi atau foto orang lain tanpa izin mereka.</li>
+                        <li>Hormati batas-batas yang ditetapkan oleh teman dan koneksi Anda di media sosial.</li>
+                        <li>Jangan menggunakan informasi pribadi orang lain untuk keuntungan pribadi atau untuk merugikan mereka.</li>
+                        <li>Berhati-hati saat memposting lokasi atau check-in yang dapat membahayakan privasi orang lain.</li>
+                        <li>Hindari membagikan screenshot percakapan pribadi tanpa persetujuan semua pihak yang terlibat.</li>
                     </ul>
                     <p>Ingat, etika privasi bukan hanya tentang aturan, tetapi juga tentang membangun kepercayaan dan rasa hormat dalam komunitas online.</p>
                 </div>
             </div>
         </section>
 
-        <section id="literasi-digital" class="py-16 bg-white">
+        <section id="praktik-terbaik" class="py-16 bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-center">Literasi Digital</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4 flex items-center">
-                            <i class="fas fa-search text-red-600 mr-2"></i>
-                            Mengenali Informasi Palsu
-                        </h3>
-                        <p>Belajar cara mengidentifikasi dan memverifikasi sumber informasi. Jangan mudah percaya atau membagikan berita tanpa memeriksa kebenarannya terlebih dahulu.</p>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4 flex items-center">
-                            <i class="fas fa-shield-alt text-red-600 mr-2"></i>
-                            Keamanan Online
-                        </h3>
-                        <p>Pahami pentingnya kata sandi yang kuat, autentikasi dua faktor, dan cara melindungi diri dari penipuan online dan serangan phishing.</p>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4 flex items-center">
-                            <i class="fas fa-fingerprint text-red-600 mr-2"></i>
-                            Manajemen Jejak Digital
-                        </h3>
-                        <p>Ketahui bagaimana aktivitas online Anda membentuk jejak digital dan cara mengelolanya secara efektif untuk melindungi reputasi online Anda.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pilar-literasi-digital" class="py-16 bg-gray-100">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-center">4 Pilar Literasi Digital: Fondasi dalam Era Digital</h2>
+                <h2 class="text-3xl font-bold mb-8 text-center">Praktik Terbaik Media Sosial</h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4 flex items-center">
-                            <i class="fas fa-laptop text-red-600 mr-2"></i>
-                            1. Kecakapan Digital (Digital Skills)
-                        </h3>
-                        <p>Kecakapan digital adalah kemampuan menggunakan teknologi dan perangkat digital dengan efisien. Pilar ini mencakup:</p>
-                        <ul class="list-disc pl-6 mt-2">
-                            <li>Kemampuan mengoperasikan perangkat seperti komputer, smartphone, dan aplikasi.</li>
-                            <li>Pemahaman dasar tentang perangkat lunak (software) dan perangkat keras (hardware).</li>
-                            <li>Kemampuan untuk memecahkan masalah teknis dasar yang mungkin muncul saat menggunakan teknologi.</li>
-                        </ul>
-                        <p class="mt-2">Menguasai kecakapan digital memungkinkan seseorang untuk beradaptasi dengan cepat terhadap perubahan teknologi yang terus berkembang.</p>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-user-lock mr-2"></i>1. Jaga Privasi Anda</h3>
+                        <p>Selalu periksa pengaturan privasi akun Anda dan batasi informasi yang Anda bagikan secara publik. Ingat, sekali sesuatu diunggah ke internet, sulit untuk menghapusnya sepenuhnya.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4 flex items-center">
-                            <i class="fas fa-balance-scale text-red-600 mr-2"></i>
-                            2. Etika Digital (Digital Ethics)
-                        </h3>
-                        <p>Etika digital adalah pedoman moral yang mengatur perilaku individu di dunia maya. Pilar ini melibatkan:</p>
-                        <ul class="list-disc pl-6 mt-2">
-                            <li>Kesadaran akan hak dan privasi orang lain di internet.</li>
-                            <li>Menghindari perilaku seperti cyberbullying, penyebaran hoaks, dan plagiarisme.</li>
-                            <li>Menggunakan teknologi secara bertanggung jawab, seperti menghormati hak cipta dan hak kekayaan intelektual.</li>
-                        </ul>
-                        <p class="mt-2">Dengan etika digital, kita dapat menciptakan lingkungan digital yang aman, nyaman, dan inklusif untuk semua pengguna.</p>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-brain mr-2"></i>2. Berpikir Sebelum Memposting</h3>
+                        <p>Pertimbangkan dampak jangka panjang dari konten yang Anda posting. Apakah itu dapat mempengaruhi reputasi atau peluang Anda di masa depan? Jika ragu, lebih baik tidak memposting.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4 flex items-center">
-                            <i class="fas fa-shield-alt text-red-600 mr-2"></i>
-                            3. Keamanan Digital (Digital Safety)
-                        </h3>
-                        <p>Keamanan digital berfokus pada perlindungan data pribadi dan informasi penting dari ancaman di dunia maya. Hal ini mencakup:</p>
-                        <ul class="list-disc pl-6 mt-2">
-                            <li>Menggunakan kata sandi yang kuat dan berbeda untuk setiap akun.</li>
-                            <li>Mengenali ancaman seperti phishing, malware, dan penipuan daring.</li>
-                            <li>Mengelola data pribadi dengan bijak, seperti tidak membagikan informasi sensitif di media sosial.</li>
-                        </ul>
-                        <p class="mt-2">Memahami keamanan digital membantu individu menjaga diri mereka dari risiko yang dapat merugikan secara finansial maupun emosional.</p>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-check-double mr-2"></i>3. Verifikasi Informasi</h3>
+                        <p>Sebelum membagikan berita atau informasi, pastikan untuk memeriksa kebenarannya dari sumber yang terpercaya. Jangan berkontribusi pada penyebaran berita palsu atau misinformasi.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-4 flex items-center">
-                            <i class="fas fa-users text-red-600 mr-2"></i>
-                            4. Budaya Digital (Digital Culture)
-                        </h3>
-                        <p>Budaya digital adalah pemahaman tentang bagaimana teknologi memengaruhi komunikasi, kolaborasi, dan perilaku sosial. Pilar ini mencakup:</p>
-                        <ul class="list-disc pl-6 mt-2">
-                            <li>Menggunakan teknologi untuk kolaborasi yang positif, seperti berbagi informasi bermanfaat dan membangun komunitas daring.</li>
-                            <li>Mengembangkan sikap kritis terhadap informasi yang ditemukan di internet.</li>
-                            <li>Menghargai keragaman budaya dalam interaksi digital.</li>
-                        </ul>
-                        <p class="mt-2">Dengan budaya digital yang kuat, masyarakat dapat memanfaatkan teknologi untuk membangun hubungan yang lebih baik dan produktif.</p>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4"><i class="fas fa-heart mr-2"></i>4. Bersikap Positif dan Konstruktif</h3>
+                        <p>Gunakan media sosial untuk menyebarkan positifitas. Berikan komentar yang membangun, dukung orang lain, dan hindari konflik yang tidak perlu.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-red-600 text-white py-8"><footer class="bg-red-600 text-white py-8">
+    <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto text-center">
             <div class="mt-4 flex justify-center space-x-4">
-                <a href="https://www.facebook.com/agamriyandana.id" class="text-2xl hover:text-gray-300" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="https://x.com/agam_riyandana1/" class="text-2xl hover:text-gray-300" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/realagam1" class="text-2xl hover:text-gray-300" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-2xl hover:text-gray-300" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/agamriyandana.id" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/agam_riyandana1/" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/realagam1" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p class="mt-4">&copy; <span id="current-year"></span> Literasi Digital Dan Media Sosial Cerdas. All Rights Reserved. Dibuat dengan <span class="text-yellow-300">❤️</span> untuk Indonesia</p>
+            <p class="mt-4">&copy; <span id="current-year"></span> Literasi Digital Dan Media Sosial Cerdas. All Rights Reserved. Dibuat dengan <i class="fas fa-heart text-red-500"></i> untuk Indonesia</p>
         </div>
     </footer>
 
     <script>
-        // Update current year
+        // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('header');
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-            }
-        });
-
         // Mobile menu toggle
-        const menuButton = document.querySelector('button');
-        const navItems = document.querySelector('nav ul');
-        
-        menuButton.addEventListener('click', () => {
-            navItems.classList.toggle('hidden');
-            navItems.classList.toggle('flex');
-            navItems.classList.toggle('flex-col');
-            navItems.classList.toggle('absolute');
-            navItems.classList.toggle('top-16');
-            navItems.classList.toggle('right-0');
-            navItems.classList.toggle('bg-red-600');
-            navItems.classList.toggle('w-full');
-            navItems.classList.toggle('text-center');
-            navItems.classList.toggle('py-4');
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        // Smooth scrolling for anchor links
+        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
