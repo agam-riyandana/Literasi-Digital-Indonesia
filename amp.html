@@ -9,49 +9,195 @@
     <meta name="description" content="Pelajari literasi digital dan penggunaan media sosial yang aman, etis, dan efektif di Indonesia. Temukan tips tentang cyber crimes, etika privasi, dan praktik terbaik.">
     <meta name="keywords" content="literasi digital, media sosial, cyber crimes, etika privasi, keamanan online, Indonesia">
     <meta name="author" content="Agam Riyandana">
-    <meta name="google-adsense-account" content="ca-pub-3345566781682408">
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; color: #1f2937; line-height: 1.5; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-        header { background-color: #1f2937; color: white; position: sticky; top: 0; z-index: 1000; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
-        .logo { font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; }
-        .logo::before { content: '🛡️'; margin-right: 0.5rem; }
-        .nav-links { display: none; }
-        .nav-links a { color: white; text-decoration: none; padding: 0.5rem 1rem; }
-        .nav-links a:hover { background-color: rgba(255,255,255,0.1); border-radius: 0.25rem; }
-        .menu-button { background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
-        main { padding: 2rem 0; }
-        h1, h2, h3 { margin-bottom: 1rem; }
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; }
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1f2937;
+            --accent-color: #fbbf24;
+            --text-color: #1f2937;
+            --background-color: #f3f4f6;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--background-color); 
+            color: var(--text-color); 
+            line-height: 1.6; 
+            font-size: 16px;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 1rem; 
+        }
+        header { 
+            background-color: var(--secondary-color); 
+            color: white; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 1rem 0; 
+        }
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            display: flex; 
+            align-items: center; 
+        }
+        .logo::before { 
+            content: '🛡️'; 
+            margin-right: 0.5rem; 
+        }
+        .nav-links { 
+            display: none; 
+        }
+        .nav-links a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 0.5rem 1rem; 
+        }
+        .nav-links a:hover { 
+            background-color: rgba(255,255,255,0.1); 
+            border-radius: 0.25rem; 
+        }
+        .menu-button { 
+            background: none; 
+            border: none; 
+            color: white; 
+            font-size: 1.5rem; 
+            cursor: pointer; 
+        }
+        main { 
+            padding: 2rem 0; 
+        }
+        h1, h2, h3 { 
+            margin-bottom: 1rem; 
+            line-height: 1.2;
+        }
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.75rem; }
         h3 { font-size: 1.5rem; }
-        .hero { background-color: #2563eb; color: white; text-align: center; padding: 4rem 1rem; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.25rem; margin-bottom: 2rem; }
-        .cta-button { display: inline-block; background-color: #fbbf24; color: #1f2937; padding: 0.75rem 1.5rem; border-radius: 0.25rem; text-decoration: none; font-weight: bold; transition: background-color 0.3s; }
-        .cta-button:hover { background-color: #f59e0b; }
-        .section { background-color: white; border-radius: 0.5rem; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-        .section h2 { color: #2563eb; }
-        .grid { display: grid; gap: 1.5rem; }
-        footer { background-color: #1f2937; color: white; text-align: center; padding: 2rem 0; }
-        .social-links { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; }
-        .social-links a { color: white; font-size: 1.5rem; }
+        .hero { 
+            background-color: var(--primary-color); 
+            color: white; 
+            text-align: center; 
+            padding: 4rem 1rem; 
+        }
+        .hero h1 { 
+            font-size: 2.5rem; 
+            margin-bottom: 1rem; 
+        }
+        .hero p { 
+            font-size: 1.25rem; 
+            margin-bottom: 2rem; 
+        }
+        .cta-button { 
+            display: inline-block; 
+            background-color: var(--accent-color); 
+            color: var(--secondary-color); 
+            padding: 0.75rem 1.5rem; 
+            border-radius: 0.25rem; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: background-color 0.3s; 
+        }
+        .cta-button:hover { 
+            background-color: #f59e0b; 
+        }
+        .section { 
+            background-color: white; 
+            border-radius: 0.5rem; 
+            padding: 2rem; 
+            margin-bottom: 2rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+        }
+        .section h2 { 
+            color: var(--primary-color); 
+        }
+        .grid { 
+            display: grid; 
+            gap: 1.5rem; 
+        }
+        footer { 
+            background-color: var(--secondary-color); 
+            color: white; 
+            text-align: center; 
+            padding: 2rem 0; 
+        }
+        .social-links { 
+            display: flex; 
+            justify-content: center; 
+            gap: 1rem; 
+            margin-bottom: 1rem; 
+        }
+        .social-links a { 
+            color: white; 
+            font-size: 1.5rem; 
+            text-decoration: none;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
         @media (min-width: 768px) {
-            .nav-links { display: flex; }
-            .menu-button { display: none; }
-            .grid { grid-template-columns: repeat(2, 1fr); }
+            .nav-links { 
+                display: flex; 
+            }
+            .menu-button { 
+                display: none; 
+            }
+            .grid { 
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.25rem; }
+            h3 { font-size: 1.75rem; }
         }
         .cyber-bg, .fraud-detection-bg, .cyber-crimes-bg, .digital-literacy-bg, .privacy-ethics-bg, .best-practices-bg {
-            background-color: #f3f4f6;
+            background-color: var(--background-color);
             background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
             background-size: 20px 20px;
         }
+        amp-sidebar {
+            width: 250px;
+            background-color: var(--secondary-color);
+        }
+        amp-sidebar nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        amp-sidebar nav ul li a {
+            display: block;
+            padding: 1rem;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        amp-sidebar nav ul li a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
     </style>
+    <amp-font
+        layout="nodisplay"
+        font-family="Inter"
+        timeout="3000"
+        on-error-remove-class="my-font-loading"
+        on-error-add-class="my-font-missing"
+        on-load-remove-class="my-font-loading"
+        on-load-add-class="my-font-loaded">
+    </amp-font>
 </head>
 <body>
     <header>
@@ -222,5 +368,9 @@
         }
         </script>
     </amp-analytics>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
